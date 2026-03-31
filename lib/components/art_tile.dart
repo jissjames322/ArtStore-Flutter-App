@@ -11,8 +11,6 @@ class ArtTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 25),
-      width: 280,
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(12),
@@ -20,10 +18,15 @@ class ArtTile extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          //show the image
-          ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Image.asset(art.imagePath),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12)),
+              child: Image.network(
+                art.imagePath,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
 
           // description

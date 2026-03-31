@@ -8,27 +8,26 @@ class Cart extends ChangeNotifier {
     Art(
       artName: 'The Milkmaid',
       price: '1000',
-      imagePath: 'lib/images/image3.jpg',
-      description: 'Made by Vermeer Johannes',
+      imagePath: 'https://picsum.photos/seed/art2/800/800',
+      description: 'Classic masterpiece showcasing profound elegance.',
     ),
-
     Art(
       artName: 'Water Lilies',
       price: '3000',
-      imagePath: 'lib/images/image4.jpg',
-      description: 'Made by Monet,Claude',
+      imagePath: 'https://picsum.photos/seed/art2/800/800',
+      description: 'A serene impressionist wonder.',
     ),
     Art(
       artName: 'Starry Night',
       price: '5000',
-      imagePath: 'lib/images/image5.jpg',
-      description: 'Made by Van Gogh , Vincent',
+      imagePath: 'https://picsum.photos/seed/art3/800/800',
+      description: 'A vibrant and emotional nighttime landscape.',
     ),
     Art(
-      artName: 'Girl With a  Pearl',
+      artName: 'Girl With a Pearl',
       price: '3400',
-      imagePath: 'lib/images/image2.jpg',
-      description: 'Made by Vermeer ,Jan',
+      imagePath: 'https://picsum.photos/seed/art4/800/800',
+      description: 'An iconic portrait capturing timeless beauty.',
     ),
   ];
 

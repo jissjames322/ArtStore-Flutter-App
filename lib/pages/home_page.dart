@@ -1,6 +1,8 @@
 import 'package:ecommerce_app/components/bottom_nav_bar.dart';
 import 'package:ecommerce_app/pages/cart_page.dart';
 import 'package:ecommerce_app/pages/shop_page.dart';
+import 'package:ecommerce_app/pages/about_page.dart';
+import 'package:ecommerce_app/pages/intro_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -37,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[30],
+      backgroundColor: Colors.grey[50],
       bottomNavigationBar: MyButtomNavBar(
         onTabChange: (index) => navigateBottomBar(index),
       ),
@@ -59,13 +61,13 @@ class _HomePageState extends State<HomePage> {
       ),
 
       drawer: Drawer(
-        backgroundColor: Colors.grey[100],
+        backgroundColor: Colors.black87,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //logo
           children: [
-            DrawerHeader(
-              child: Image.asset('/lib/images/image2.jpg', color: Colors.white),
+            const DrawerHeader(
+              child: Icon(Icons.brush, color: Colors.white, size: 80),
             ),
 
             Padding(
@@ -74,30 +76,45 @@ class _HomePageState extends State<HomePage> {
             ),
 
             //other page
-            const Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 25.0),
-
               child: ListTile(
-                leading: Icon(Icons.home, color: Colors.white),
-                title: Text('Home', style: TextStyle(color: Colors.white)),
+                leading: const Icon(Icons.home, color: Colors.white),
+                title: const Text('Home', style: TextStyle(color: Colors.white)),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
             ),
 
-            const Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 25.0),
-
               child: ListTile(
-                leading: Icon(Icons.info, color: Colors.white),
-                title: Text('About', style: TextStyle(color: Colors.white)),
+                leading: const Icon(Icons.info, color: Colors.white),
+                title: const Text('About', style: TextStyle(color: Colors.white)),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AboutPage()),
+                  );
+                },
               ),
             ),
 
-            const Padding(
-              padding: const EdgeInsets.only(left: 25.0,bottom: 25.0),
-
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0, bottom: 25.0),
               child: ListTile(
-                leading: Icon(Icons.logout, color: Colors.white),
-                title: Text('Logout', style: TextStyle(color: Colors.white)),
+                leading: const Icon(Icons.logout, color: Colors.white),
+                title: const Text('Logout', style: TextStyle(color: Colors.white)),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => const IntroPage()),
+                    (route) => false,
+                  );
+                },
               ),
             ),
           ],

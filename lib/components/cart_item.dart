@@ -28,7 +28,10 @@ class _CartItemState extends State<CartItem> {
       ),
       margin: const EdgeInsets.only(bottom: 10),
       child: ListTile(
-        leading: Image.asset(widget.art.imagePath),
+        leading: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.network(widget.art.imagePath, width: 60, height: 60, fit: BoxFit.cover),
+        ),
         title: Text(widget.art.artName),
         subtitle: Text(widget.art.price),
         trailing: IconButton(

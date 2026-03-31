@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/models/cart.dart';
-import 'package:ecommerce_app/pages/intro_page.dart';
+import 'package:ecommerce_app/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       create: (context) => Cart(),
     builder:(context,child) => const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:IntroPage(),
+      home:SplashScreen(),
     ),
     );
      

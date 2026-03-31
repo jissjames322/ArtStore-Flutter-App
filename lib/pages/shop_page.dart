@@ -85,12 +85,16 @@ class _ShopPageState extends State<ShopPage> {
           const SizedBox(height: 10),
 
           Expanded(
-            child: ListView.builder(
+            child: GridView.builder(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 350,
+                mainAxisSpacing: 25,
+                crossAxisSpacing: 25,
+                childAspectRatio: 0.75, // Adjusts height vs width
+              ),
               itemCount: 4,
-              scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                //create a shoe
-                //get an art from the art store
                 Art art = value.getArtList()[index];
                 return ArtTile(art: art, onTap: () => addArtToCart(art));
               },
