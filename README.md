@@ -25,9 +25,9 @@ An elegant, modern Art Gallery mobile application built with Flutter. Discover b
 
 *(Place your application screenshots in the `screenshots` folder and link them below!)*
 
-| Splash Screen | Intro Page | Shop Page |
+| Home Page | About Page Page | Cart Page |
 | :-: | :-: | :-: |
-| <img src="screenshots/splash.jpg" width="250"/> | <img src="screenshots/intro.jpg" width="250"/> | <img src="screenshots/shop.jpg" width="250"/> |
+| <img src="screenshots/homePage.png" width="250"/> | <img src="screenshots/AboutPage.png" width="250"/> | <img src="screenshots/CartPage.png" width="250"/> |
 
 ## Folder Structure
 
