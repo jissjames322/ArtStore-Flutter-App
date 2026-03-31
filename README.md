@@ -23,7 +23,6 @@ An elegant, modern Art Gallery mobile application built with Flutter. Discover b
 
 ## 📸 Screenshots
 
-*(Place your application screenshots in the `screenshots` folder and link them below!)*
 
 | Home Page | About Page Page | Cart Page |
 | :-: | :-: | :-: |
